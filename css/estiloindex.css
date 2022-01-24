@@ -1,0 +1,551 @@
+/*----------------------------------------------BODY------------------------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: auto;
+    background-color: #F2F2F2;
+}
+
+
+/*----------------------------------------------HEADER-----------------------------------------*/
+header{
+    height: 200px;
+    width: 100%;
+    background-color: #A5A697;
+}
+
+.titulos-contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulosheader{
+    display: flex;
+    justify-content: space-between; 
+    width: 60%;
+}
+
+#logopng{
+    height: 100px;
+    width: 100px;
+}
+
+#tituloUno{
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    color: #F2F2F2;
+    text-shadow: 3px 3px 3px black;
+}
+
+#tituloDos{
+    font-family: 'EB Garamond', serif;
+    font-size: 40px;
+    color: #ddb7ac;
+    text-shadow: 3px 3px 3px black;
+}
+
+
+
+/*---------------------------------------------NAV-----------------------------------------*/
+
+nav{
+    background-color: #F2F2F2;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+nav ul{
+    list-style-type: none;
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    font-size: 15px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+nav ul li a{
+    color: #A5A697;
+    text-decoration: none;
+    display: block;
+    padding-top: 6%;
+    padding-bottom: 6%; 
+}
+
+nav ul li a:hover{
+    background-color: #ddb7ac;
+}
+
+
+
+/*-----------------------------------------MAIN INDEX------------------------------------*/
+
+#indexLayout{
+    display:grid;
+    background-color: #F2F2F2;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+#sectionUno{
+    height: 90%;
+    width: auto;
+    grid-area:banner;
+    
+}
+
+#imgTupper{
+    grid-area:section1;
+    justify-self: center;
+    align-self: center;
+}
+.fotoTupper{
+    border: solid 7px #A5A697;
+   
+    height: 90%;
+    width:90%;
+}
+
+#descTupper{
+    height: 50px;
+    width: 400px;
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    line-height: 1;
+    color: #ddb7ac;
+    text-shadow: 3px 3px 3px #ebcec6;
+    text-align: justify;
+    grid-area:section2;
+    align-self:stretch;
+    
+}
+
+.pieDeFoto{
+    font-family: 'Dancing Script', cursive;
+    color: #737272;
+    text-shadow: 3px 3px 3px #A5A697;
+    text-align: center;
+    font-size: 40px;    
+}
+
+#descEssen{
+    height: 50px;
+    width:400px;
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    line-height: 1;
+    color: #ddb7ac;
+    text-shadow: 3px 3px 3px #ebcec6;
+    text-align: justify;
+    grid-area:section3;
+}
+
+#imgEssen{
+    grid-area:section4;
+    
+}
+#fotoEssen{
+    border: solid 7px #A5A697;
+    height: 90%;
+    width:auto;
+}
+
+
+
+/*------------------------------------MAIN SHOP-----------------------------------------*/
+
+#shopLayout{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 10% 20% 10% 20% 20%;
+    grid-template-areas: "banner banner"
+                         "titulo1 titulo1"
+                         "1 2"
+                         "titulo2 titulo2"
+                         "3 4"
+                         "5 6";
+}
+
+#bannerShop{
+    height: auto;
+    width: 100%;
+    grid-area:banner;
+}
+
+#hijo1{
+    grid-area:1;
+}
+
+#hijo2{
+    grid-area:2;
+}
+
+#hijo3{
+    grid-area:3;
+}
+
+#hijo4{
+    grid-area:4;
+}
+
+#hijo5{
+    grid-area:5;
+}
+
+#hijo6{
+    grid-area:6;
+}
+
+#titulo1{
+    grid-area:titulo1;
+}
+
+#titulo2{
+    grid-area:titulo2;
+}
+
+.subtitle{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: #737272;
+    text-shadow: 3px 3px 3px rgb(255, 252, 252);
+    text-align: center;
+    background-color: #ebcec6;    
+}
+
+.preguntas{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: #F2F2F2;
+    text-shadow: 3px 3px 3px #737272;
+    text-align: center;
+    background-color: #A5A697;
+}
+
+.lista{
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 400px;
+}
+
+.botonesShop{
+    padding-top: 20px;
+    padding-left: 500px;
+}
+
+/*-------------------------MAIN CONTACTO------------------------*/
+
+#bannerContacto{
+    height: auto;
+    width: 100%;
+}
+
+fieldset legend{
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    font-weight: bold;
+    color: #737272;
+    text-shadow: 3px 3px 3px rgb(238, 223, 223);
+}
+
+.botones{
+    font-family: 'EB Garamont', script;
+    font-size: 20px;
+    color: #737272;
+    font-weight: bold;   
+}
+
+fieldset{
+    background-color: #ebcec6;
+    width: 600px;
+    padding: 20px 20px 20px 20px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/*---------------------------------------MAIN RECETAS----------------------------------*/
+
+#bannerRecetas{
+    height: auto;
+    width: 100%;
+}
+
+.section{
+    padding: 20px 10px 20px 30px;
+}
+
+#recetaUno{
+    background-color: #ebcec6;
+}
+
+#recetaDos{
+    background-color: #A5A697;
+}
+
+#recetaTres{
+    background-color: #ebcec6;
+}
+
+.lista{
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    color: #737272;
+}
+
+.listaDos{
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    color: #ebcec6;
+}
+
+.subtitle{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: #737272;
+}
+
+.subtitleDos{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: #ebcec6;
+}
+
+
+
+/*----------------------------------------FOOTER-------------------------------------*/
+
+footer{ 
+    background-color: #A5A697;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#news{
+    font-family: 'Dancing Script', cursive;
+    color:#f2d5f2;
+    font-size: 30px;
+    text-align: center;
+}
+
+#redes{
+    font-family: 'Dancing Script', cursive;
+    color:#ddb7ac;
+    font-size: 30px;
+    text-align: center;
+    line-height: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#redes ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px;
+}
+
+footer div ul{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+}
+
+
+
+/*-----------------------------------------MEDIA QUERIS--------------------------------------*/
+
+
+@media only screen and (max-width: 576px){
+
+/*----------HEADER---------*/
+    header{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 50%;
+    }
+
+    #tituloUno {
+        font-size: 30px;
+    }
+
+    #tituloDos{
+        font-size: 20px;
+    }
+
+    #logopng{
+        height: 80px;
+        width: auto;
+    }
+
+/*----------MAIN INDEX----------*/    
+    #indexLayout{   
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat (5, 1fr);
+        grid-template-areas: "banner"
+                             "section1"
+                             "section2"
+                             "section3" 
+                             "section4";
+    }
+
+/*----------FOOTER---------*/
+    footer{
+        height: 80px;
+        width: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #news{
+        font-size: 12px;
+    }
+
+    #redes{
+        font-size: 12px;
+    }
+
+    #redes ul{
+        padding: 8px 0px;
+    }
+}
+
+
+@media only screen and (min-width: 576px){
+
+/*----------HEADER---------*/
+    header{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 60%;
+    }
+
+    #tituloUno {
+        font-size: 30px;
+    }
+
+    #tituloDos{
+        font-size: 20px;
+    }
+
+    #logopng{
+        height: 100px;
+        width: auto;
+    }
+
+/*---------NAV----------*/
+    nav{
+        padding: 0%;
+    }
+
+    nav ul{
+        padding: 5px 0px 5px 0px;
+    }
+
+/*----------MAIN INDEX----------*/  
+    #indexLayout{   
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat (5, 1fr);
+        grid-template-areas: "banner"
+                             "section1"
+                             "section2"
+                             "section3" 
+                             "section4";
+        justify-items: center;
+    }
+
+/*---------FOOTER---------*/
+    footer{
+        height: 80px;
+        width: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #news{
+        font-size: 15px;
+    }
+
+    #redes{
+        font-size: 15px;
+    }
+
+    #redes ul{
+        padding: 10px 0px;
+    }
+}
+
+@media only screen and (min-width: 992px){
+
+/*----------HEADER---------*/
+   header{
+       display:flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-evenly;
+   }
+
+/*---------NAV----------*/
+   nav{
+       padding: 1%;
+   }
+
+   nav ul{
+       padding: 5px 0px 5px 0px;
+   }
+
+/*-----------MAIN INDEX----------*/
+   #indexLayout{   
+       display: grid;
+       grid-template-columns: 50% 50%;
+       grid-template-rows: 20% 40% 40%;
+       grid-template-areas: "banner banner"
+                            "section1 section2"
+                            "section3 section4";
+   }
+
+/*----------FOOTER---------*/
+   footer{ 
+       height: 20%;
+       width: auto;
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+   }
+}
+
+
+@media only screen and (min-width: 1200px){
+
+/*-----------MAIN INDEX----------*/
+    #indexLayout{   
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 40% 40%;
+        grid-template-areas: "banner banner"
+                             "section1 section2"
+                             "section3 section4";
+        
+    }
+}
+
+
