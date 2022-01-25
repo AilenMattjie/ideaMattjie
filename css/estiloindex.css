@@ -89,21 +89,20 @@ nav ul li a:hover{
 #indexLayout{
     display:grid;
     background-color: #F2F2F2;
-    justify-content: space-evenly;
-    align-content: center;
 }
 
 #sectionUno{
     height: 90%;
     width: auto;
     grid-area:banner;
-    
 }
 
 #imgTupper{
     grid-area:section1;
     justify-self: center;
     align-self: center;
+    padding-top: 5%;
+    padding-left: 3%;
 }
 .fotoTupper{
     border: solid 7px #A5A697;
@@ -122,6 +121,7 @@ nav ul li a:hover{
     text-shadow: 3px 3px 3px #ebcec6;
     text-align: justify;
     grid-area:section2;
+    padding-top: 10%;
     align-self:stretch;
     
 }
@@ -144,11 +144,13 @@ nav ul li a:hover{
     text-shadow: 3px 3px 3px #ebcec6;
     text-align: justify;
     grid-area:section3;
+    padding-top: 10%;
 }
 
 #imgEssen{
     grid-area:section4;
-    
+    padding-top: 5%;
+    padding-left: 3%;
 }
 #fotoEssen{
     border: solid 7px #A5A697;
@@ -166,10 +168,10 @@ nav ul li a:hover{
     grid-template-rows: 20% 10% 20% 10% 20% 20%;
     grid-template-areas: "banner banner"
                          "titulo1 titulo1"
-                         "1 2"
+                         "grid1 grid2"
                          "titulo2 titulo2"
-                         "3 4"
-                         "5 6";
+                         "grid3 grid4"
+                         "grid5 grid6";
 }
 
 #bannerShop{
@@ -179,27 +181,27 @@ nav ul li a:hover{
 }
 
 #hijo1{
-    grid-area:1;
+    grid-area:grid1;
 }
 
 #hijo2{
-    grid-area:2;
+    grid-area:grid2;
 }
 
 #hijo3{
-    grid-area:3;
+    grid-area:grid3;
 }
 
 #hijo4{
-    grid-area:4;
+    grid-area:grid4;
 }
 
 #hijo5{
-    grid-area:5;
+    grid-area:grid5;
 }
 
 #hijo6{
-    grid-area:6;
+    grid-area:grid6;
 }
 
 #titulo1{
@@ -228,16 +230,21 @@ nav ul li a:hover{
     background-color: #A5A697;
 }
 
+/*
+.pedido{
+    padding-top:2%;
+    padding-bottom: 2%;
+}*/
 .lista{
     font-family: 'EB Garamond', serif;
     font-size: 20px;
-    padding-top: 20px;
-    padding-left: 400px;
+    padding-top: 10%;
+    padding-left: 20%;
 }
 
 .botonesShop{
-    padding-top: 20px;
-    padding-left: 500px;
+    padding-top: 5%;
+    padding-left: 20%;
 }
 
 /*-------------------------MAIN CONTACTO------------------------*/
@@ -272,25 +279,48 @@ fieldset{
 
 /*---------------------------------------MAIN RECETAS----------------------------------*/
 
+#layoutRecetas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 #bannerRecetas{
     height: auto;
     width: 100%;
 }
 
 .section{
-    padding: 20px 10px 20px 30px;
+    /*padding: 20px 10px 20px 30px;*/
+    display: grid;
+    grid-template-column: repeat (3, fr);
+    grid-template-rows: 20% 80%;
+    grid-template-areas: "titulo titulo titulo"
+                         "prep prep ingr"
+                         "prep prep ingr";
 }
 
+#rec1{
+    grid-area:titulo;
+}
+
+#prep1{
+    grid-area:prep;
+}
+
+#ingr1{
+    grid-area:ing;
+}
 #recetaUno{
-    background-color: #ebcec6;
+    background-image: linear-gradient(to right, #ebcec6, #ddb7ac);
 }
 
 #recetaDos{
-    background-color: #A5A697;
+    background-image: linear-gradient(to right, #a5a697, #737272);
 }
 
 #recetaTres{
-    background-color: #ebcec6;
+    background-image: linear-gradient(to right, #ebcec6, #ddb7ac);
 }
 
 .lista{
@@ -403,6 +433,56 @@ footer div ul{
                              "section4";
     }
 
+    
+    #sectionUno{
+        height: 50%;
+        width: auto;
+        grid-area:banner;
+    }
+
+    #imgTupper{
+        grid-area:section1;
+        justify-self: center;
+        align-self: center;
+        padding-top: 5%;
+        padding-left: 5%;
+    }
+
+    
+    .pieDeFoto{
+        font-family: 'Dancing Script', cursive;
+        color: #737272;
+        text-shadow: 3px 3px 3px #A5A697;
+        text-align: center;
+        font-size: 30px;    
+    }
+
+    #descEssen{
+        height: 100%;
+        width:auto;
+        font-family: 'EB Garamond', serif;
+        font-size: 30px;
+        line-height: 1;
+        color: #ddb7ac;
+        text-shadow: 3px 3px 3px #ebcec6;
+        text-align: justify;
+        grid-area:section4;
+        padding-top: 20%;
+}
+
+    #imgEssen{
+        grid-area:section3;
+        padding-top: 5%;
+        padding-left: 5%;
+    }
+
+    #fotoEssen{
+        border: solid 7px #A5A697;
+        height: 90%;
+        width:auto;
+    }
+
+
 /*----------FOOTER---------*/
     footer{
         height: 80px;
@@ -471,6 +551,8 @@ footer div ul{
                              "section4";
         justify-items: center;
     }
+
+
 
 /*---------FOOTER---------*/
     footer{
