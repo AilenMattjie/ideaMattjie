@@ -91,6 +91,10 @@ nav ul li a:hover{
     background-color: #F2F2F2;
 }
 
+#carouselExampleControls{
+    grid-area: carousel;
+}
+
 #sectionUno{
     height: 90%;
     width: auto;
@@ -158,8 +162,44 @@ nav ul li a:hover{
     width:auto;
 }
 
+/*----------------------------------MAIN PRODUCTOS--------------------------------------*/
 
+#subtitulo{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    color: #737272;
+    text-shadow: 3px 3px 3px rgb(158, 153, 153);
 
+}
+
+.banner{
+    height: 250px;
+    width: auto;
+}
+
+.subt-prod{
+    
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    color: #ddb7ac;
+    text-shadow: 3px 3px 3px black;
+}
+
+.lista-prod{
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    color: #737272;
+}
+
+.col-md-12{
+    justify-items: center;
+    align-items: space-evenly;
+}
+
+.col-md-6{
+    justify-content: center;
+    align-content: space-around;
+}
 /*------------------------------------MAIN SHOP-----------------------------------------*/
 
 #shopLayout{
@@ -425,8 +465,9 @@ footer div ul{
     #indexLayout{   
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: repeat (5, 1fr);
-        grid-template-areas: "banner"
+        grid-template-rows: repeat (6, 1fr);
+        grid-template-areas: "carousel"
+                             "banner"
                              "section1"
                              "section2"
                              "section3" 
@@ -543,8 +584,9 @@ footer div ul{
     #indexLayout{   
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: repeat (5, 1fr);
-        grid-template-areas: "banner"
+        grid-template-rows: repeat (6, 1fr);
+        grid-template-areas: "carousel"
+                             "banner"
                              "section1"
                              "section2"
                              "section3" 
@@ -599,8 +641,9 @@ footer div ul{
    #indexLayout{   
        display: grid;
        grid-template-columns: 50% 50%;
-       grid-template-rows: 20% 40% 40%;
-       grid-template-areas: "banner banner"
+       grid-template-rows: 20% 20% 30% 30%;
+       grid-template-areas: "carousel carousel"
+                            "banner banner"
                             "section1 section2"
                             "section3 section4";
    }
@@ -622,8 +665,9 @@ footer div ul{
     #indexLayout{   
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 20% 40% 40%;
-        grid-template-areas: "banner banner"
+        grid-template-rows: 20% 20% 30% 30%;
+        grid-template-areas: "carousel carousel"
+                             "banner banner"
                              "section1 section2"
                              "section3 section4";
         
