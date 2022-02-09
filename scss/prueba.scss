@@ -6,15 +6,22 @@
 
 body{
     height: auto;
-    background-color: #F2F2F2;
+    background-color: $colorNeutro;
 }
 
+$colorNeutro: #F2F2F2;
+$colorVerdeOscuro: #737272;
+$colorVerdeClaro: #A5A697;
+$colorRosaOscuro: #DDB7AC;
+$colorRosaClaro: #ebcec6;
+$fuenteUno: 'EB Garamond', serif;
+$fuenteDos: 'Dancing Script', cursive;
 
 /*----------------------------------------------HEADER-----------------------------------------*/
 header{
     height: 200px;
     width: 100%;
-    background-color: #A5A697;
+    background-color: $colorVerdeClaro;
 
     #titulosheader{
         display: flex;
@@ -28,16 +35,16 @@ header{
             align-items: center;
 
             #tituloUno{
-                font-family: 'Dancing Script', cursive;
+                font-family: $fuenteDos;
                 font-size: 50px;
-                color: #F2F2F2;
+                color: $colorNeutro;
                 text-shadow: 3px 3px 3px black;
             }
 
             #tituloDos{
-                font-family: 'EB Garamond', serif;
+                font-family: $fuenteUno;
                 font-size: 40px;
-                color: #ddb7ac;
+                color: $colorRosaOscuro;
                 text-shadow: 3px 3px 3px black;
             }
         }
@@ -55,11 +62,6 @@ header{
 
 
 /*---------------------------------------------NAV-----------------------------------------*/
-$colorNeutro: #F2F2F2;
-$colorOscuro: #A5A697;
-$colorClaro: #ddb7ac;
-$fuenteUno: 'EB Garamond', serif;
-$fuenteDos: 'Dancing Script', cursive;
 
 
 nav{
@@ -79,11 +81,11 @@ nav{
         padding: 20px 0px;
 
             & li a{
-                    color: $colorOscuro;
+                    color: $colorVerdeClaro;
                     text-decoration: none;
                     display: block;
                     padding-top: 6%;
-                     padding-bottom: 6%; 
+                    padding-bottom: 6%; 
             }
         ]
 }
@@ -91,7 +93,7 @@ nav{
 
 
 nav ul li a:hover{
-    background-color: $colorClaro;
+    background-color: $colorRosaOscuro;
 }
 
 
@@ -100,7 +102,7 @@ nav ul li a:hover{
 
 #indexLayout{
     display:grid;
-    background-color: #F2F2F2;
+    background-color: $colorNeutro;
 }
 
 #carouselExampleControls{
@@ -119,68 +121,64 @@ nav ul li a:hover{
     align-self: center;
     padding-top: 5%;
     padding-left: 3%;
-}
-.fotoTupper{
-    border: solid 7px #A5A697;
-   
-    height: 90%;
-    width:90%;
+    .fotoTupper{
+        border: solid 7px $colorVerdeClaro;   
+        height: 90%;
+        width:90%;
+    }
 }
 
-#descTupper{
+
+.estiloDescripcion{
     height: 50px;
     width: 400px;
-    font-family: 'EB Garamond', serif;
+    font-family: $fuenteUno;
     font-size: 30px;
     line-height: 1;
-    color: #ddb7ac;
-    text-shadow: 3px 3px 3px #ebcec6;
+    color: $colorRosaOscuro;
+    text-shadow: 3px 3px 3px $colorRosaClaro;
     text-align: justify;
-    grid-area:section2;
     padding-top: 10%;
-    align-self:stretch;
-    
+}
+#descTupper{
+    @include estiloDescripcion();
+    grid-area:section2;
+    align-self:stretch;   
+}
+
+#descEssen{
+    @include estiloDescripcion();
+    grid-area:section3;    
 }
 
 .pieDeFoto{
-    font-family: 'Dancing Script', cursive;
-    color: #737272;
-    text-shadow: 3px 3px 3px #A5A697;
+    font-family: $fuenteDos;
+    color: $colorVerdeOscuro;
+    text-shadow: 3px 3px 3px $colorVerdeClaro;
     text-align: center;
     font-size: 40px;    
 }
 
-#descEssen{
-    height: 50px;
-    width:400px;
-    font-family: 'EB Garamond', serif;
-    font-size: 30px;
-    line-height: 1;
-    color: #ddb7ac;
-    text-shadow: 3px 3px 3px #ebcec6;
-    text-align: justify;
-    grid-area:section3;
-    padding-top: 10%;
-}
+
 
 #imgEssen{
     grid-area:section4;
     padding-top: 5%;
     padding-left: 3%;
+    #fotoEssen{
+        @extend .fotoTupper;
+        width:auto;
+    }
 }
-#fotoEssen{
-    border: solid 7px #A5A697;
-    height: 90%;
-    width:auto;
-}
+
 
 /*----------------------------------MAIN PRODUCTOS--------------------------------------*/
 
 #subtitulo{
     font-family: $fuenteDos;
     font-size: 40px;
-    color: $colorOscuro;
-    text-shadow: 3px 3px 3px rgb(158, 153, 153);
+    color: $colorVerdeOscuro;
+    text-shadow: 3px 3px 3px $colorVerdeClaro;
 
 }
 
@@ -193,14 +191,14 @@ nav ul li a:hover{
     
     font-family: $fuenteUno;
     font-size: 30px;
-    color: #ddb7ac;
+    color: $colorRosaOscuro;
     text-shadow: 3px 3px 3px black;
 }
 
 .lista-prod{
     font-family: $fuenteUno;
     font-size: 20px;
-    color: #737272;
+    color: $colorVerdeOscuro;
 }
 
 .col-md-12{
@@ -226,14 +224,31 @@ nav ul li a:hover{
                          "grid5 grid6";
 }
 
-#bannerShop{
+.estiloBanner{
     height: auto;
     width: 100%;
+}
+#bannerShop{
+    @include estiloBanner ();
     grid-area:banner;
 }
 
 #hijo1{
     grid-area:grid1;
+    .subtitle{
+        font-family: $fuenteDos;
+        font-size: 30px;
+        color: $colorVerdeOscuro;
+        text-shadow: 3px 3px 3px rgb(255, 252, 252);
+        text-align: center;
+        background-color: $colorRosaClaro;       
+    .lista{
+        font-family: $fuenteUno;
+        font-size: 20px;
+        padding-top: 10%;
+        padding-left: 20%;
+        }   
+    }
 }
 
 #hijo2{
@@ -258,40 +273,16 @@ nav ul li a:hover{
 
 #titulo1{
     grid-area:titulo1;
+    .preguntas{
+        @extend .subtitle;
+        color: #F2F2F2;
+        text-shadow: 3px 3px 3px #737272;
+        background-color: #A5A697;
+    }
 }
 
 #titulo2{
     grid-area:titulo2;
-}
-
-.subtitle{
-    font-family: 'Dancing Script', cursive;
-    font-size: 30px;
-    color: #737272;
-    text-shadow: 3px 3px 3px rgb(255, 252, 252);
-    text-align: center;
-    background-color: #ebcec6;    
-}
-
-.preguntas{
-    font-family: 'Dancing Script', cursive;
-    font-size: 30px;
-    color: #F2F2F2;
-    text-shadow: 3px 3px 3px #737272;
-    text-align: center;
-    background-color: #A5A697;
-}
-
-/*
-.pedido{
-    padding-top:2%;
-    padding-bottom: 2%;
-}*/
-.lista{
-    font-family: 'EB Garamond', serif;
-    font-size: 20px;
-    padding-top: 10%;
-    padding-left: 20%;
 }
 
 .botonesShop{
@@ -302,12 +293,11 @@ nav ul li a:hover{
 /*-------------------------MAIN CONTACTO------------------------*/
 
 #bannerContacto{
-    height: auto;
-    width: 100%;
+    @include estiloBanner ();
 }
 
 fieldset legend{
-    font-family: 
+    font-family: $fuenteDos
     font-size: 50px;
     font-weight: bold;
     color: $colorOscuro;
@@ -338,12 +328,10 @@ fieldset{
     align-items: center;
 }
 #bannerRecetas{
-    height: auto;
-    width: 100%;
+    @include estiloBanner ();
 }
 
 .section{
-    /*padding: 20px 10px 20px 30px;*/
     display: grid;
     grid-template-column: repeat (3, fr);
     grid-template-rows: 20% 80%;
@@ -364,39 +352,37 @@ fieldset{
     grid-area:ing;
 }
 #recetaUno{
-    background-image: linear-gradient(to right, #ebcec6, #ddb7ac);
+    background-image: linear-gradient(to right, $colorRosaClaro, $colorRosaOscuro);
 }
 
 #recetaDos{
-    background-image: linear-gradient(to right, #a5a697, #737272);
+    background-image: linear-gradient(to right, $colorVerdeClaro, $colorVerdeOscuro);
 }
 
 #recetaTres{
-    background-image: linear-gradient(to right, #ebcec6, #ddb7ac);
+    @extend #recetaUno;
 }
 
 .lista{
-    font-family: 'EB Garamond', serif;
+    font-family: $fuenteUno;
     font-size: 20px;
-    color: #737272;
+    color: $colorVerdeOscuro;
 }
 
 .listaDos{
-    font-family: 'EB Garamond', serif;
-    font-size: 20px;
-    color: #ebcec6;
+    @extend .lista;
+    color: $colorRosaClaro;
 }
 
 .subtitle{
-    font-family: 'Dancing Script', cursive;
+    font-family: $fuenteDos;
     font-size: 30px;
-    color: #737272;
+    color: $colorVerdeOscuro;
 }
 
 .subtitleDos{
-    font-family: 'Dancing Script', cursive;
-    font-size: 30px;
-    color: #ebcec6;
+    @extend .subtitle;
+    color: $colorRosaClaro;
 }
 
 
@@ -404,7 +390,7 @@ fieldset{
 /*----------------------------------------FOOTER-------------------------------------*/
 
 footer{ 
-    background-color: #A5A697;
+    background-color: $colorVerdeClaro;
     height: 200px;
     width: 100%;
     display: flex;
@@ -413,17 +399,14 @@ footer{
 }
 
 #news{
-    font-family: 'Dancing Script', cursive;
-    color:#f2d5f2;
+    font-family: $fuenteDos;
+    color: $colorRosaOscuro;
     font-size: 30px;
     text-align: center;
 }
 
 #redes{
-    font-family: 'Dancing Script', cursive;
-    color:#ddb7ac;
-    font-size: 30px;
-    text-align: center;
+    @extend #news;
     line-height: 0.8;
     display: flex;
     flex-direction: column;
