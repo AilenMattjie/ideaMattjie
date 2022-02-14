@@ -164,7 +164,12 @@ nav ul li a:hover {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 20% 10% 20% 10% 20% 20%;
-  grid-template-areas: "banner banner" "titulo1 titulo1" "grid1 grid2" "titulo2 titulo2" "grid3 grid4" "grid5 grid6"; }
+  grid-template-areas: "banner banner"
+ "titulo1 titulo1"
+ "grid1 grid2"
+ "titulo2 titulo2"
+ "grid3 grid4"
+ "grid5 grid6"; }
 
 #bannerShop {
   height: auto;
@@ -267,7 +272,9 @@ fieldset {
   display: grid;
   grid-template-column: repeat 3, fr;
   grid-template-rows: 20% 80%;
-  grid-template-areas: "titulo titulo titulo" "prep prep ingr" "prep prep ingr"; }
+  grid-template-areas: "titulo titulo titulo"
+ "prep prep ingr"
+ "prep prep ingr"; }
 
 #rec1 {
   grid-area: titulo; }
@@ -365,7 +372,12 @@ footer div ul {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat 6, 1fr;
-    grid-template-areas: "carousel" "banner" "section1" "section2" "section3"  "section4"; }
+    grid-template-areas: "carousel"
+ "banner"
+ "section1"
+ "section2"
+ "section3" 
+ "section4"; }
   #sectionUno {
     height: 50%;
     width: auto;
@@ -440,7 +452,12 @@ footer div ul {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat 6, 1fr;
-    grid-template-areas: "carousel" "banner" "section1" "section2" "section3"  "section4";
+    grid-template-areas: "carousel"
+ "banner"
+ "section1"
+ "section2"
+ "section3" 
+ "section4";
     justify-items: center; }
   /*---------FOOTER---------*/
   footer {
@@ -473,7 +490,10 @@ footer div ul {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 20% 30% 30%;
-    grid-template-areas: "carousel carousel" "banner banner" "section1 section2" "section3 section4"; }
+    grid-template-areas: "carousel carousel"
+ "banner banner"
+ "section1 section2"
+ "section3 section4"; }
   /*----------FOOTER---------*/
   footer {
     height: 20%;
@@ -488,4 +508,7 @@ footer div ul {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 20% 30% 30%;
-    grid-template-areas: "carousel carousel" "banner banner" "section1 section2" "section3 section4"; } }
+    grid-template-areas: "carousel carousel"
+ "banner banner"
+ "section1 section2"
+ "section3 section4"; } }
