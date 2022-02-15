@@ -420,7 +420,7 @@ footer div ul{
     #indexLayout{   
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: repeat (6, 1fr);
+        grid-template-rows: auto;
         grid-template-areas: "carousel"
                              "banner"
                              "section1"
@@ -435,8 +435,8 @@ footer div ul{
     }
     
     #sectionUno{
-        height: 50%;
-        width: auto;
+        height: 90%;
+        width: 100%;
         grid-area:banner;
     }
 
@@ -444,8 +444,8 @@ footer div ul{
         grid-area:section1;
         justify-self: center;
         align-self: center;
-        padding-top: 5%;
-        padding-left: 5%;
+        padding-top: 2%;
+        padding-left: 2%;
     }
 
     .pieDeFoto{
@@ -453,20 +453,27 @@ footer div ul{
     }
 
     #descTupper{
+        height: 100px;
+        width: auto;
         font-size: 18px;
         grid-area: section2;
+        justify-content: center;
+        align-content: center;
     }
 
     #imgEssen{
         grid-area:section3;
-        padding-top: 5%;
-        padding-left: 5%;
+        padding-top: 2%;
+        padding-left: 2%;
     }
 
     #descEssen{
+        height: 100px;
+        width:auto;
         font-size: 18px;
         grid-area:section4;
-        padding-top: 20%;
+        justify-content: center;
+        align-content: center;
 }
 
     #fotoEssen{
@@ -542,7 +549,7 @@ footer div ul{
     #indexLayout{   
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: repeat (6, 1fr);
+        grid-template-rows: auto;
         grid-template-areas: "carousel"
                              "banner"
                              "section1"
