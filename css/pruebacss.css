@@ -9,7 +9,7 @@ body {
 
 /*----------------------------------------------HEADER-----------------------------------------*/
 header {
-  height: 200px;
+  height: 230px;
   width: 100%;
   background-color: #A5A697; }
   header #titulosheader {
@@ -22,14 +22,14 @@ header {
       justify-content: center;
       align-items: center; }
       header #titulosheader .titulos-contenedor #tituloUno {
-        font-family: 'Dancing Script', cursive;
+        font-family: "Dancing Script", cursive;
         font-size: 50px;
         color: #F2F2F2;
         text-shadow: 3px 3px 3px black; }
       header #titulosheader .titulos-contenedor #tituloDos {
-        font-family: 'EB Garamond', serif;
+        font-family: "EB Garamond", serif;
         font-size: 40px;
-        color: #ddb7ac;
+        color: #DDB7AC;
         text-shadow: 3px 3px 3px black; }
     header #titulosheader #logopng {
       height: 100px;
@@ -40,27 +40,25 @@ nav {
   background-color: #F2F2F2;
   padding: 20px 0px 20px 0px;
   text-align: center; }
-
-nav ul {
-  list-style-type: none;
-  font-family: 'EB Garamond', serif;
-  font-weight: bold;
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 20px 0px; }
-
-nav ul li a {
-  color: #A5A697;
-  text-decoration: none;
-  display: block;
-  padding-top: 6%;
-  padding-bottom: 6%; }
+  nav ul {
+    list-style-type: none;
+    font-family: "EB Garamond", serif;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0px; }
+    nav ul li a {
+      color: #A5A697;
+      text-decoration: none;
+      display: block;
+      padding-top: 6%;
+      padding-bottom: 6%; }
 
 nav ul li a:hover {
-  background-color: #ddb7ac; }
+  background-color: #DDB7AC; }
 
 /*-----------------------------------------MAIN INDEX------------------------------------*/
 #indexLayout {
@@ -81,73 +79,82 @@ nav ul li a:hover {
   align-self: center;
   padding-top: 5%;
   padding-left: 3%; }
+  #imgTupper .fotoTupper {
+    border: solid 7px #A5A697;
+    height: 90%;
+    width: 90%; }
 
-.fotoTupper {
-  border: solid 7px #A5A697;
-  height: 90%;
-  width: 90%; }
+.estiloDescripcion {
+  height: 50px;
+  width: 400px;
+  font-family: "EB Garamond", serif;
+  font-size: 30px;
+  line-height: 1;
+  color: #DDB7AC;
+  text-shadow: 3px 3px 3px #ebcec6;
+  text-align: justify;
+  padding-top: 10%; }
 
 #descTupper {
   height: 50px;
   width: 400px;
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   font-size: 30px;
   line-height: 1;
-  color: #ddb7ac;
+  color: #DDB7AC;
   text-shadow: 3px 3px 3px #ebcec6;
   text-align: justify;
-  grid-area: section2;
   padding-top: 10%;
+  grid-area: section2;
   align-self: stretch; }
 
+#descEssen {
+  height: 50px;
+  width: 400px;
+  font-family: "EB Garamond", serif;
+  font-size: 30px;
+  line-height: 1;
+  color: #DDB7AC;
+  text-shadow: 3px 3px 3px #ebcec6;
+  text-align: justify;
+  padding-top: 10%;
+  grid-area: section3; }
+
 .pieDeFoto {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   color: #737272;
   text-shadow: 3px 3px 3px #A5A697;
   text-align: center;
   font-size: 40px; }
 
-#descEssen {
-  height: 50px;
-  width: 400px;
-  font-family: 'EB Garamond', serif;
-  font-size: 30px;
-  line-height: 1;
-  color: #ddb7ac;
-  text-shadow: 3px 3px 3px #ebcec6;
-  text-align: justify;
-  grid-area: section3;
-  padding-top: 10%; }
-
 #imgEssen {
   grid-area: section4;
   padding-top: 5%;
   padding-left: 3%; }
-
-#fotoEssen {
-  border: solid 7px #A5A697;
-  height: 90%;
-  width: auto; }
+  #imgEssen #fotoEssen {
+    border: solid 7px #A5A697;
+    height: 90%;
+    width: auto; }
 
 /*----------------------------------MAIN PRODUCTOS--------------------------------------*/
 #subtitulo {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 40px;
   color: #737272;
-  text-shadow: 3px 3px 3px #9e9999; }
+  text-shadow: 3px 3px 3px #A5A697; }
 
 .banner {
   height: 250px;
   width: auto; }
 
 .subt-prod {
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   font-size: 30px;
-  color: #ddb7ac;
+  color: #DDB7AC;
   text-shadow: 3px 3px 3px black; }
 
 .lista-prod {
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   font-size: 20px;
   color: #737272; }
 
@@ -160,91 +167,57 @@ nav ul li a:hover {
   align-content: space-around; }
 
 /*------------------------------------MAIN SHOP-----------------------------------------*/
-#shopLayout {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 20% 10% 20% 10% 20% 20%;
-  grid-template-areas: "banner banner"
- "titulo1 titulo1"
- "grid1 grid2"
- "titulo2 titulo2"
- "grid3 grid4"
- "grid5 grid6"; }
-
 #bannerShop {
   height: auto;
-  width: 100%;
-  grid-area: banner; }
+  width: 100%; }
 
-#hijo1 {
-  grid-area: grid1; }
-
-#hijo2 {
-  grid-area: grid2; }
-
-#hijo3 {
-  grid-area: grid3; }
-
-#hijo4 {
-  grid-area: grid4; }
-
-#hijo5 {
-  grid-area: grid5; }
-
-#hijo6 {
-  grid-area: grid6; }
-
-#titulo1 {
-  grid-area: titulo1; }
-
-#titulo2 {
-  grid-area: titulo2; }
-
-.subtitle {
-  font-family: 'Dancing Script', cursive;
+.subtitle, .preguntas {
+  font-family: "Dancing Script", cursive;
   font-size: 30px;
   color: #737272;
   text-shadow: 3px 3px 3px #fffcfc;
   text-align: center;
   background-color: #ebcec6; }
 
-.preguntas {
-  font-family: 'Dancing Script', cursive;
-  font-size: 30px;
-  color: #F2F2F2;
-  text-shadow: 3px 3px 3px #737272;
-  text-align: center;
-  background-color: #A5A697; }
-
-/*
-.pedido{
-    padding-top:2%;
-    padding-bottom: 2%;
-}*/
-.lista {
-  font-family: 'EB Garamond', serif;
+.lista, .listaDos {
+  font-family: "EB Garamond", serif;
   font-size: 20px;
   padding-top: 10%;
   padding-left: 20%; }
+
+.preguntas {
+  color: #F2F2F2;
+  text-shadow: 3px 3px 3px #F2F2F2;
+  background-color: #A5A697; }
+
+.pedido {
+  padding-top: 3%;
+  padding-bottom: 3%; }
 
 .botonesShop {
   padding-top: 5%;
   padding-left: 20%; }
 
 /*-------------------------MAIN CONTACTO------------------------*/
+#contactoLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 #bannerContacto {
   height: auto;
   width: 100%; }
 
 fieldset legend {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 50px;
   font-weight: bold;
   color: #737272;
   text-shadow: 3px 3px 3px #eedfdf; }
 
 .botones {
-  font-family: 'EB Garamont', script;
+  font-family: "EB Garamond", serif;
   font-size: 20px;
   color: #737272;
   font-weight: bold; }
@@ -267,52 +240,24 @@ fieldset {
   height: auto;
   width: 100%; }
 
-.section {
-  /*padding: 20px 10px 20px 30px;*/
-  display: grid;
-  grid-template-column: repeat 3, fr;
-  grid-template-rows: 20% 80%;
-  grid-template-areas: "titulo titulo titulo"
- "prep prep ingr"
- "prep prep ingr"; }
-
-#rec1 {
-  grid-area: titulo; }
-
-#prep1 {
-  grid-area: prep; }
-
-#ingr1 {
-  grid-area: ing; }
-
-#recetaUno {
-  background-image: linear-gradient(to right, #ebcec6, #ddb7ac); }
+#recetaUno, #recetaTres {
+  background-image: linear-gradient(to right, #ebcec6, #DDB7AC); }
 
 #recetaDos {
-  background-image: linear-gradient(to right, #a5a697, #737272); }
+  background-image: linear-gradient(to right, #A5A697, #737272); }
 
-#recetaTres {
-  background-image: linear-gradient(to right, #ebcec6, #ddb7ac); }
-
-.lista {
-  font-family: 'EB Garamond', serif;
+.lista, .listaDos {
+  font-family: "EB Garamond", serif;
   font-size: 20px;
   color: #737272; }
 
 .listaDos {
-  font-family: 'EB Garamond', serif;
-  font-size: 20px;
   color: #ebcec6; }
 
-.subtitle {
-  font-family: 'Dancing Script', cursive;
+.subtitle, .preguntas {
+  font-family: "Dancing Script", cursive;
   font-size: 30px;
   color: #737272; }
-
-.subtitleDos {
-  font-family: 'Dancing Script', cursive;
-  font-size: 30px;
-  color: #ebcec6; }
 
 /*----------------------------------------FOOTER-------------------------------------*/
 footer {
@@ -323,17 +268,13 @@ footer {
   justify-content: space-around;
   align-items: center; }
 
-#news {
-  font-family: 'Dancing Script', cursive;
-  color: #f2d5f2;
+#news, #redes {
+  font-family: "Dancing Script", cursive;
+  color: #DDB7AC;
   font-size: 30px;
   text-align: center; }
 
 #redes {
-  font-family: 'Dancing Script', cursive;
-  color: #ddb7ac;
-  font-size: 30px;
-  text-align: center;
   line-height: 0.8;
   display: flex;
   flex-direction: column;
@@ -372,12 +313,10 @@ footer div ul {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat 6, 1fr;
-    grid-template-areas: "carousel"
- "banner"
- "section1"
- "section2"
- "section3" 
- "section4"; }
+    grid-template-areas: "carousel" "banner" "section1" "section2" "section3"  "section4"; }
+  .bannerIndex {
+    width: 50%;
+    height: auto; }
   #sectionUno {
     height: 50%;
     width: auto;
@@ -389,29 +328,25 @@ footer div ul {
     padding-top: 5%;
     padding-left: 5%; }
   .pieDeFoto {
-    font-family: 'Dancing Script', cursive;
-    color: #737272;
-    text-shadow: 3px 3px 3px #A5A697;
-    text-align: center;
-    font-size: 30px; }
-  #descEssen {
-    height: 100%;
-    width: auto;
-    font-family: 'EB Garamond', serif;
-    font-size: 30px;
-    line-height: 1;
-    color: #ddb7ac;
-    text-shadow: 3px 3px 3px #ebcec6;
-    text-align: justify;
-    grid-area: section4;
-    padding-top: 20%; }
+    font-size: 22px; }
+  #descTupper {
+    font-size: 18px;
+    grid-area: section2; }
   #imgEssen {
     grid-area: section3;
     padding-top: 5%;
     padding-left: 5%; }
+  #descEssen {
+    font-size: 18px;
+    grid-area: section4;
+    padding-top: 20%; }
   #fotoEssen {
     border: solid 7px #A5A697;
     height: 90%;
+    width: auto; }
+  /*------------MAIN CONTACTO-----------*/
+  #formulario {
+    height: 50%;
     width: auto; }
   /*----------FOOTER---------*/
   footer {
@@ -420,7 +355,7 @@ footer div ul {
     display: flex;
     justify-content: space-around;
     align-items: center; }
-  #news {
+  #news, #redes {
     font-size: 12px; }
   #redes {
     font-size: 12px; }
@@ -452,12 +387,7 @@ footer div ul {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat 6, 1fr;
-    grid-template-areas: "carousel"
- "banner"
- "section1"
- "section2"
- "section3" 
- "section4";
+    grid-template-areas: "carousel" "banner" "section1" "section2" "section3"  "section4";
     justify-items: center; }
   /*---------FOOTER---------*/
   footer {
@@ -466,7 +396,7 @@ footer div ul {
     display: flex;
     justify-content: space-around;
     align-items: center; }
-  #news {
+  #news, #redes {
     font-size: 15px; }
   #redes {
     font-size: 15px; }
@@ -490,10 +420,7 @@ footer div ul {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 20% 30% 30%;
-    grid-template-areas: "carousel carousel"
- "banner banner"
- "section1 section2"
- "section3 section4"; }
+    grid-template-areas: "carousel carousel" "banner banner" "section1 section2" "section3 section4"; }
   /*----------FOOTER---------*/
   footer {
     height: 20%;
@@ -508,7 +435,4 @@ footer div ul {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 20% 30% 30%;
-    grid-template-areas: "carousel carousel"
- "banner banner"
- "section1 section2"
- "section3 section4"; } }
+    grid-template-areas: "carousel carousel" "banner banner" "section1 section2" "section3 section4"; } }

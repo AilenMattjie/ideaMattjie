@@ -3,12 +3,6 @@
     margin: 0px;
     padding: 0px;
 }
-
-body{
-    height: auto;
-    background-color: $colorNeutro;
-}
-
 $colorNeutro: #F2F2F2;
 $colorVerdeOscuro: #737272;
 $colorVerdeClaro: #A5A697;
@@ -17,9 +11,16 @@ $colorRosaClaro: #ebcec6;
 $fuenteUno: 'EB Garamond', serif;
 $fuenteDos: 'Dancing Script', cursive;
 
+body{
+    height: auto;
+    background-color: $colorNeutro;
+}
+
+
+
 /*----------------------------------------------HEADER-----------------------------------------*/
 header{
-    height: 200px;
+    height: 230px;
     width: 100%;
     background-color: $colorVerdeClaro;
 
@@ -87,7 +88,7 @@ nav{
                     padding-top: 6%;
                     padding-bottom: 6%; 
             }
-        ]
+    }
 }
 
 
@@ -141,13 +142,29 @@ nav ul li a:hover{
     padding-top: 10%;
 }
 #descTupper{
-    @include estiloDescripcion();
+    height: 50px;
+    width: 400px;
+    font-family: $fuenteUno;
+    font-size: 30px;
+    line-height: 1;
+    color: $colorRosaOscuro;
+    text-shadow: 3px 3px 3px $colorRosaClaro;
+    text-align: justify;
+    padding-top: 10%;
     grid-area:section2;
     align-self:stretch;   
 }
 
 #descEssen{
-    @include estiloDescripcion();
+    height: 50px;
+    width: 400px;
+    font-family: $fuenteUno;
+    font-size: 30px;
+    line-height: 1;
+    color: $colorRosaOscuro;
+    text-shadow: 3px 3px 3px $colorRosaClaro;
+    text-align: justify;
+    padding-top: 10%;
     grid-area:section3;    
 }
 
@@ -166,7 +183,8 @@ nav ul li a:hover{
     padding-top: 5%;
     padding-left: 3%;
     #fotoEssen{
-        @extend .fotoTupper;
+        border: solid 7px $colorVerdeClaro;   
+        height: 90%;
         width:auto;
     }
 }
@@ -212,25 +230,12 @@ nav ul li a:hover{
 }
 /*------------------------------------MAIN SHOP-----------------------------------------*/
 
-#shopLayout{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 10% 20% 10% 20% 20%;
-    grid-template-areas: "banner banner"
-                         "titulo1 titulo1"
-                         "grid1 grid2"
-                         "titulo2 titulo2"
-                         "grid3 grid4"
-                         "grid5 grid6";
-}
-
-.estiloBanner{
+@mixin estiloBanner{
     height: auto;
     width: 100%;
 }
 #bannerShop{
     @include estiloBanner ();
-    grid-area:banner;
 }
 
 .subtitle{
@@ -240,55 +245,26 @@ nav ul li a:hover{
     text-shadow: 3px 3px 3px rgb(255, 252, 252);
     text-align: center;
     background-color: $colorRosaClaro;       
+}
 
-    .lista{
+.lista{
     font-family: $fuenteUno;
     font-size: 20px;
     padding-top: 10%;
     padding-left: 20%;
     }   
-}
-
-#hijo1{
-    grid-area:grid1;   
-}
-
-#hijo2{
-    grid-area:grid2;
-}
-
-#hijo3{
-    grid-area:grid3;
-}
-
-#hijo4{
-    grid-area:grid4;
-}
-
-#hijo5{
-    grid-area:grid5;
-}
-
-#hijo6{
-    grid-area:grid6;
-}
-
-#titulo1{
-    grid-area:titulo1;
-   
-}
 
 .preguntas{
     @extend .subtitle;
-    color: #F2F2F2;
-    text-shadow: 3px 3px 3px #737272;
-    background-color: #A5A697;
+    color: $colorNeutro;
+    text-shadow: 3px 3px 3px $colorNeutro;
+    background-color: $colorVerdeClaro;
 }
 
-#titulo2{
-    grid-area:titulo2;
+.pedido{
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
-
 .botonesShop{
     padding-top: 5%;
     padding-left: 20%;
@@ -297,10 +273,9 @@ nav ul li a:hover{
 /*-------------------------MAIN CONTACTO------------------------*/
 #contactoLayout{
     display:flex;
-    flex-direction: row;
-    align-content: space-around;
-    padding-left: 20%;
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #bannerContacto{
@@ -308,22 +283,22 @@ nav ul li a:hover{
 }
 
 fieldset legend{
-    font-family: $fuenteDos
+    font-family: $fuenteDos;
     font-size: 50px;
     font-weight: bold;
-    color: $colorOscuro;
+    color: $colorVerdeOscuro;
     text-shadow: 3px 3px 3px rgb(238, 223, 223);
 }
 
 .botones{
     font-family: $fuenteUno;
     font-size: 20px;
-    color: $colorOscuro;
+    color: $colorVerdeOscuro;
     font-weight: bold;   
 }
 
 fieldset{
-    background-color: $colorClaro;
+    background-color: $colorRosaClaro;
     width: 600px;
     padding: 20px 20px 20px 20px;
     text-align: justify;
@@ -370,12 +345,6 @@ fieldset{
     font-size: 30px;
     color: $colorVerdeOscuro;
 }
-
-.subtitleDos{
-    @extend .subtitle;
-    color: $colorRosaClaro;
-}
-
 
 
 /*----------------------------------------FOOTER-------------------------------------*/
@@ -460,6 +429,10 @@ footer div ul{
                              "section4";
     }
 
+    .bannerIndex{
+        width: 50%;
+        height: auto;
+    }
     
     #sectionUno{
         height: 50%;
@@ -475,27 +448,14 @@ footer div ul{
         padding-left: 5%;
     }
 
-    
     .pieDeFoto{
-        font-family: 'Dancing Script', cursive;
-        color: #737272;
-        text-shadow: 3px 3px 3px #A5A697;
-        text-align: center;
-        font-size: 30px;    
+        font-size: 22px;
     }
 
-    #descEssen{
-        height: 100%;
-        width:auto;
-        font-family: 'EB Garamond', serif;
-        font-size: 30px;
-        line-height: 1;
-        color: #ddb7ac;
-        text-shadow: 3px 3px 3px #ebcec6;
-        text-align: justify;
-        grid-area:section4;
-        padding-top: 20%;
-}
+    #descTupper{
+        font-size: 18px;
+        grid-area: section2;
+    }
 
     #imgEssen{
         grid-area:section3;
@@ -503,12 +463,24 @@ footer div ul{
         padding-left: 5%;
     }
 
+    #descEssen{
+        font-size: 18px;
+        grid-area:section4;
+        padding-top: 20%;
+}
+
     #fotoEssen{
         border: solid 7px #A5A697;
         height: 90%;
         width:auto;
     }
 
+/*------------MAIN CONTACTO-----------*/
+
+#formulario{
+    height: 50%;
+    width:auto;
+}
 
 /*----------FOOTER---------*/
     footer{
