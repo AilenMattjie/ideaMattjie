@@ -56,27 +56,30 @@
             <img src="../multimedia/contacto.jpg" alt="bannercontacto" class="img-fluid">
         </div>
         
-        <form action="" id="formulario">
-            <fieldset id="form">
-                <legend>Escribime!</legend>
-                    <label for="Nombre" class="botones">Nombre</label>
-                    <input type="text" placeholder="Ingresa tu Nombre" id="Nombre">
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nombre</label>
+              <input type="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Tus datos no van a ser compartidos.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Telefono</label>
+              <input type="telefono" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword2" class="form-label">Correo Electronico</label>
+                <input type="email" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="Comentario" class="form-label">Qué estás buscando?</label>
                 <br>
-                    <label for="Apellido" class="botones">Apellido</label>
-                    <input type="text" placeholder="Ingresa tu Apellido" id="Apellido">
-                <br>
-                    <label for="Telefono" class="botones">Telefono</label>
-                    <input type="text" placeholder="Ingresa tu Telefono" id="Telefono">
-                <br>
-                    <label for="Mail" class="botones">Correo Electrónico</label>
-                    <input type="text" placeholder="Ingresa tu Correo" id="Mail">
-                <br>
-                    <label for="Comentario" class="botones">Qué estás buscando?</label>
-                    <textarea name="" id="Comentario" cols="30" rows="10"></textarea>
-                <br>
-                    <input type="submit" value="ENVIAR">
-            </fieldset>
-        </form>
+                <textarea name="" id="Comentario" class="form-control" cols="30" rows="10"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+
+        
 
     </main>
     <footer>

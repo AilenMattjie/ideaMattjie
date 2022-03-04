@@ -400,19 +400,23 @@ footer div ul{
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        height: 50%;
+        height: 100px;
     }
 
+    #titulosheader{
+        height: 70px;
+        width:auto;
+    }
     #tituloUno {
-        font-size: 30px;
+        font-size: 5px;
     }
 
     #tituloDos{
-        font-size: 20px;
+        font-size: 3px;
     }
 
     #logopng{
-        height: 80px;
+        height: 50px;
         width: auto;
     }
 
@@ -427,6 +431,8 @@ footer div ul{
                              "section2"
                              "section3" 
                              "section4";
+        justify-content: center;
+        align-content: center;
     }
 
     .bannerIndex{
@@ -440,46 +446,54 @@ footer div ul{
         grid-area:banner;
     }
 
-    #imgTupper{
-        grid-area:section1;
-        justify-self: center;
-        align-self: center;
-        padding-top: 2%;
-        padding-left: 2%;
-    }
+    .estiloDescripcion{
+        height: 100px;
+        width: auto;
+        font-family: $fuenteUno;
+        font-size: 15px;
+        line-height: 1;
+        color: $colorRosaOscuro;
+        text-shadow: 2px 2px 2px $colorRosaClaro;
+        text-align: justify;
+        padding-left: 3%;
+        padding-right: 3%;
 
-    .pieDeFoto{
-        font-size: 22px;
     }
-
     #descTupper{
         height: 100px;
         width: auto;
+        font-family: $fuenteUno;
         font-size: 18px;
-        grid-area: section2;
-        justify-content: center;
-        align-content: center;
+        line-height: 1;
+        color: $colorRosaOscuro;
+        text-shadow: 2px 2px 2px $colorRosaClaro;
+        text-align: justify;
+        padding-left: 3%;
+        padding-right: 3%;
+        grid-area:section2;
+        align-self:stretch;   
     }
-
-    #imgEssen{
-        grid-area:section3;
-        padding-top: 2%;
-        padding-left: 2%;
-    }
-
+    
     #descEssen{
         height: 100px;
-        width:auto;
+        width: auto;
+        font-family: $fuenteUno;
         font-size: 18px;
-        grid-area:section4;
-        justify-content: center;
-        align-content: center;
-}
-
-    #fotoEssen{
-        border: solid 7px #A5A697;
-        height: 90%;
-        width:auto;
+        line-height: 1;
+        color: $colorRosaOscuro;
+        text-shadow: 2px 2px 2px $colorRosaClaro;
+        text-align: justify;
+        padding-left: 3%;
+        padding-right: 3%; 
+        grid-area:section3;    
+    }
+    
+    .pieDeFoto{
+        font-family: $fuenteDos;
+        color: $colorVerdeOscuro;
+        text-shadow: 2px 2px 2px $colorVerdeClaro;
+        text-align: center;
+        font-size: 13px;    
     }
 
 /*------------MAIN CONTACTO-----------*/
@@ -491,7 +505,7 @@ footer div ul{
 
 /*----------FOOTER---------*/
     footer{
-        height: 80px;
+        height: 15%;
         width: auto;
         display: flex;
         justify-content: space-around;
@@ -559,6 +573,18 @@ footer div ul{
         justify-items: center;
     }
 
+    .pieDeFoto{
+        font-size: 22px;
+    }
+
+    #descTupper{
+        height: 100px;
+        width: auto;
+        font-size: 18px;
+        grid-area: section2;
+        justify-content: center;
+        align-content: center;
+    }
 
 
 /*---------FOOTER---------*/
