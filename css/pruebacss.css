@@ -12,28 +12,33 @@ header {
   height: 230px;
   width: 100%;
   background-color: #A5A697; }
-  header #titulosheader {
-    display: flex;
-    justify-content: space-between;
-    width: 60%; }
-    header #titulosheader .titulos-contenedor {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      header #titulosheader .titulos-contenedor #tituloUno {
-        font-family: "Dancing Script", cursive;
-        font-size: 50px;
-        color: #F2F2F2;
-        text-shadow: 3px 3px 3px black; }
-      header #titulosheader .titulos-contenedor #tituloDos {
-        font-family: "EB Garamond", serif;
-        font-size: 40px;
-        color: #DDB7AC;
-        text-shadow: 3px 3px 3px black; }
-    header #titulosheader #logopng {
-      height: 100px;
-      width: 100px; }
+
+#titulosheader {
+  display: flex;
+  justify-content: space-between;
+  width: 60%; }
+
+.titulos-contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#tituloUno {
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+  color: #F2F2F2;
+  text-shadow: 3px 3px 3px black; }
+
+#tituloDos {
+  font-family: "EB Garamond", serif;
+  font-size: 40px;
+  color: #DDB7AC;
+  text-shadow: 3px 3px 3px black; }
+
+#logopng {
+  height: 100px;
+  width: 100px; }
 
 /*---------------------------------------------NAV-----------------------------------------*/
 nav {
@@ -67,6 +72,9 @@ nav ul li a:hover {
 
 #carouselExampleControls {
   grid-area: carousel; }
+
+.d-block {
+  width: 100%; }
 
 #sectionUno {
   height: 90%;
@@ -207,7 +215,9 @@ nav ul li a:hover {
 
 #bannerContacto {
   height: auto;
-  width: 100%; }
+  width: 100%;
+  justify-content: center;
+  align-items: center; }
 
 fieldset legend {
   font-family: "Dancing Script", cursive;
@@ -221,13 +231,6 @@ fieldset legend {
   font-size: 20px;
   color: #737272;
   font-weight: bold; }
-
-fieldset {
-  background-color: #ebcec6;
-  width: 600px;
-  padding: 20px 20px 20px 20px;
-  text-align: justify;
-  line-height: 1.5; }
 
 /*---------------------------------------MAIN RECETAS----------------------------------*/
 #layoutRecetas {
@@ -300,16 +303,13 @@ footer div ul {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 100px; }
-  #titulosheader {
-    height: 70px;
-    width: auto; }
+    height: 60%; }
   #tituloUno {
-    font-size: 5px; }
+    font-size: 30px; }
   #tituloDos {
-    font-size: 3px; }
+    font-size: 20px; }
   #logopng {
-    height: 50px;
+    height: 100px;
     width: auto; }
   /*----------MAIN INDEX----------*/
   #indexLayout {
@@ -461,11 +461,3 @@ footer div ul {
     display: flex;
     justify-content: space-around;
     align-items: center; } }
-
-@media only screen and (min-width: 1200px) {
-  /*-----------MAIN INDEX----------*/
-  #indexLayout {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 20% 30% 30%;
-    grid-template-areas: "carousel carousel" "banner banner" "section1 section2" "section3 section4"; } }

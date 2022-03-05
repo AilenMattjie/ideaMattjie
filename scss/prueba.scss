@@ -23,38 +23,41 @@ header{
     height: 230px;
     width: 100%;
     background-color: $colorVerdeClaro;
+}
 
     #titulosheader{
         display: flex;
         justify-content: space-between; 
         width: 60%;
+    }
 
-        .titulos-contenedor{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+    .titulos-contenedor{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #tituloUno{
+        font-family: $fuenteDos;
+        font-size: 50px;
+        color: $colorNeutro;
+        text-shadow: 3px 3px 3px black;
+    }
 
-            #tituloUno{
-                font-family: $fuenteDos;
-                font-size: 50px;
-                color: $colorNeutro;
-                text-shadow: 3px 3px 3px black;
-            }
+    #tituloDos{
+        font-family: $fuenteUno;
+        font-size: 40px;
+        color: $colorRosaOscuro;
+        text-shadow: 3px 3px 3px black;
+    }
+        
 
-            #tituloDos{
-                font-family: $fuenteUno;
-                font-size: 40px;
-                color: $colorRosaOscuro;
-                text-shadow: 3px 3px 3px black;
-            }
-        }
-
-        #logopng{
+    #logopng{
         height: 100px;
         width: 100px;}
-    }
-}
+    
+
 
 
 
@@ -108,6 +111,10 @@ nav ul li a:hover{
 
 #carouselExampleControls{
     grid-area: carousel;
+}
+
+.d-block{
+    width: 100%;
 }
 
 #sectionUno{
@@ -280,6 +287,8 @@ nav ul li a:hover{
 
 #bannerContacto{
     @include estiloBanner ();
+    justify-content: center;
+    align-items: center;
 }
 
 fieldset legend{
@@ -297,13 +306,6 @@ fieldset legend{
     font-weight: bold;   
 }
 
-fieldset{
-    background-color: $colorRosaClaro;
-    width: 600px;
-    padding: 20px 20px 20px 20px;
-    text-align: justify;
-    line-height: 1.5;
-}
 
 /*---------------------------------------MAIN RECETAS----------------------------------*/
 
@@ -395,30 +397,26 @@ footer div ul{
 @media only screen and (max-width: 576px){
 
 /*----------HEADER---------*/
-    header{
-        display:flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 100px;
-    }
+header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60%;
+}
 
-    #titulosheader{
-        height: 70px;
-        width:auto;
-    }
-    #tituloUno {
-        font-size: 5px;
-    }
+#tituloUno {
+    font-size: 30px;
+}
 
-    #tituloDos{
-        font-size: 3px;
-    }
+#tituloDos{
+    font-size: 20px;
+}
 
-    #logopng{
-        height: 50px;
-        width: auto;
-    }
+#logopng{
+    height: 100px;
+    width: auto;
+}
 
 /*----------MAIN INDEX----------*/    
     #indexLayout{   
@@ -611,58 +609,41 @@ footer div ul{
 
 @media only screen and (min-width: 992px){
 
-/*----------HEADER---------*/
+    
+            /*----------HEADER---------*/
    header{
-       display:flex;
-       flex-direction: row;
-       align-items: center;
-       justify-content: space-evenly;
-   }
-
-/*---------NAV----------*/
-   nav{
-       padding: 1%;
-   }
-
-   nav ul{
-       padding: 5px 0px 5px 0px;
-   }
-
-/*-----------MAIN INDEX----------*/
-   #indexLayout{   
-       display: grid;
-       grid-template-columns: 50% 50%;
-       grid-template-rows: 20% 20% 30% 30%;
-       grid-template-areas: "carousel carousel"
-                            "banner banner"
-                            "section1 section2"
-                            "section3 section4";
-   }
-
-/*----------FOOTER---------*/
-   footer{ 
-       height: 20%;
-       width: auto;
-       display: flex;
-       justify-content: space-around;
-       align-items: center;
-   }
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-
-@media only screen and (min-width: 1200px){
-
-/*-----------MAIN INDEX----------*/
-    #indexLayout{   
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 20% 20% 30% 30%;
-        grid-template-areas: "carousel carousel"
-                             "banner banner"
-                             "section1 section2"
-                             "section3 section4";
-        
-    }
+         /*---------NAV----------*/
+nav{
+    padding: 1%;
 }
 
+nav ul{
+    padding: 5px 0px 5px 0px;
+}
 
+             /*-----------MAIN INDEX----------*/
+#indexLayout{   
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 30% 30%;
+    grid-template-areas: "carousel carousel"
+                         "banner banner"
+                         "section1 section2"
+                         "section3 section4";
+}
+
+             /*----------FOOTER---------*/
+footer{ 
+    height: 20%;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+}
