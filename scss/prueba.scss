@@ -122,7 +122,7 @@ nav ul li a:hover{
     height: 90%;
     width: auto;
     grid-area:banner;
-    padding-left: 3%;
+    padding-left: 1%;
 }
 
 #imgTupper{
@@ -294,7 +294,7 @@ nav ul li a:hover{
     @include estiloBanner ();
     justify-content: center;
     align-items: center;
-    padding-left: 3%;
+    padding-left: 1%;
 }
 
 fieldset legend{
@@ -717,12 +717,6 @@ nav ul{
 
 .d-block{
     width: 100%;
-}
-
-            /*-----------MAIN PRODUCTOS---------*/
-
-.col-md-6{
-    width: 50%;
 }
 
              /*----------FOOTER---------*/
