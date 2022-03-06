@@ -236,6 +236,10 @@ nav ul li a:hover{
     justify-content: center;
     align-content: space-around;
 }
+
+.caja-video{
+    width: 80%;
+}
 /*------------------------------------MAIN SHOP-----------------------------------------*/
 
 @mixin estiloBanner{
@@ -713,6 +717,12 @@ nav ul{
 
 .d-block{
     width: 100%;
+}
+
+            /*-----------MAIN PRODUCTOS---------*/
+
+.col-md-6{
+    width: 50%;
 }
 
              /*----------FOOTER---------*/
