@@ -109,9 +109,10 @@ nav ul li a:hover{
     background-color: $colorNeutro;
 }
 
-#carouselExampleControls{
+#carouselExampleSlidesOnly{
     grid-area: carousel;
 }
+
 
 .d-block{
     width: 100%;
@@ -121,6 +122,7 @@ nav ul li a:hover{
     height: 90%;
     width: auto;
     grid-area:banner;
+    padding-left: 3%;
 }
 
 #imgTupper{
@@ -217,7 +219,6 @@ nav ul li a:hover{
     font-family: $fuenteUno;
     font-size: 30px;
     color: $colorRosaOscuro;
-    text-shadow: 3px 3px 3px black;
 }
 
 .lista-prod{
@@ -289,6 +290,7 @@ nav ul li a:hover{
     @include estiloBanner ();
     justify-content: center;
     align-items: center;
+    padding-left: 3%;
 }
 
 fieldset legend{
@@ -304,6 +306,16 @@ fieldset legend{
     font-size: 20px;
     color: $colorVerdeOscuro;
     font-weight: bold;   
+}
+
+.form-label{
+    font-family: $fuenteUno;
+    color: $colorVerdeOscuro;
+}
+
+.form-text{
+    font-family: $fuenteDos;
+    color: $colorVerdeOscuro;
 }
 
 
@@ -584,10 +596,71 @@ header{
         align-content: center;
     }
 
+    
+.bannerIndex{
+    width: 50%;
+    height: auto;
+}
+
+#sectionUno{
+    height: 90%;
+    width: 100%;
+    grid-area:banner;
+}
+
+.estiloDescripcion{
+    height: 200px;
+    width: auto;
+    font-family: $fuenteUno;
+    font-size: 15px;
+    line-height: 1;
+    color: $colorRosaOscuro;
+    text-shadow: 2px 2px 2px $colorRosaClaro;
+    text-align: justify;
+    padding-left: 3%;
+    padding-right: 3%;
+
+}
+#descTupper{
+    height: 200px;
+    width: auto;
+    font-family: $fuenteUno;
+    font-size: 23px;
+    line-height: 1;
+    color: $colorRosaOscuro;
+    text-shadow: 2px 2px 2px $colorRosaClaro;
+    text-align: justify;
+    padding-left: 3%;
+    padding-right: 3%;
+    grid-area:section2;
+    align-self:stretch;   
+}
+
+#descEssen{
+    height: 200px;
+    width: auto;
+    font-family: $fuenteUno;
+    font-size: 23px;
+    line-height: 1;
+    color: $colorRosaOscuro;
+    text-shadow: 2px 2px 2px $colorRosaClaro;
+    text-align: justify;
+    padding-left: 3%;
+    padding-right: 3%; 
+    grid-area:section3;    
+}
+
+.pieDeFoto{
+    font-family: $fuenteDos;
+    color: $colorVerdeOscuro;
+    text-shadow: 2px 2px 2px $colorVerdeClaro;
+    text-align: center;
+    font-size: 28px;    
+}
 
 /*---------FOOTER---------*/
     footer{
-        height: 80px;
+        height: 20%;
         width: auto;
         display: flex;
         justify-content: space-around;
@@ -636,6 +709,10 @@ nav ul{
                          "banner banner"
                          "section1 section2"
                          "section3 section4";
+}
+
+.d-block{
+    width: 100%;
 }
 
              /*----------FOOTER---------*/
